@@ -1,1 +1,534 @@
 
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(TastyGoApp());
+}
+
+class TastyGoApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'TastyGo',
+      theme: ThemeData(
+        primaryColor: Colors.orange,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.orange,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/tastygo_logo.png',
+                width: 150,
+                height: 150,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'TastyGo',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(),
+                    ),
+                  );
+                },
+                child: Text('Get Started'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.violet,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/tastygo_logo.png',
+                width: 150,
+                height: 150,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'TastyGo',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    ),
+                  );
+                },
+                child: Text('Login'),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupPage(),
+                    ),
+                  );
+                },
+                child: Text('Sign Up'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.violet,
+        padding: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset(
+              'assets/images/tastygo_logo.png',
+              width: 150,
+              height: 150,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'TastyGo',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Login'),
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Checkbox(value: false, onChanged: null),
+                Text('Remember Me'),
+                Spacer(),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Forgot?'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SignupPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.violet,
+        padding: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset(
+              'assets/images/tastygo_logo.png',
+              width: 150,
+              height: 150,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'TastyGo',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Phone Number',
+              ),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Username',
+              ),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Sign Up'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ThirdPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.violet,
+        padding: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              'Mcdonald\'s',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Search',
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/big_mac.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Big Mac',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        '58 Dh',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 20),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/chicken_mythic.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Chicken Mythic',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        '64 Dh',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class FourthPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.orange,
+        padding: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              'Search Results',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Found 6 results',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 20),
+            Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    'Chicken Burger',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Text(
+                    '58 Dh',
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    'Spicy Chicken Burger',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Text(
+                    '54 Dh',
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    'Veggie Burger',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Text(
+                    '48 Dh',
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    'Cheeseburger',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Text(
+                    '45 Dh',
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    'Fish Burger',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Text(
+                    '60 Dh',
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('TastyGo'),
+      ),
+      body: Container(
+        color: Colors.violet,
+        padding: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.all(10),
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/images/profile_picture.png',
+                    width: 100,
+                    height: 100,
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'User123',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text('user123@gmail.com'),
+                  Text('INPT, Avenue Allal Al Fassi-Madinat Al Irfane-Rabat'),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.all(10),
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Text(
+                    'Payment Method',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.check),
+                    ),
+                    title: Text('Card'),
+                    trailing: Image.asset(
+                      'assets/images/card_sticker.png',
+                      width: 30,
+                      height: 30,
+                    ),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.white,
+                    ),
+                    title: Text('Cash'),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
